@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get Test - Select Symptoms</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f4f8;
+    }
+  </style>
+</head>
+<body class="flex flex-col items-center min-h-screen p-4">
+  <div class="w-full max-w-2xl bg-white p-8 rounded-lg shadow-xl mt-8">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Select Your Symptoms</h1>
+
+    <div id="message" class="p-3 mt-4 rounded-md text-sm hidden"></div>
+
+    <div id="symptoms-list" class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+      <p class="text-gray-500 text-center col-span-full">Loading symptoms...</p>
+    </div>
+
+    <div class="flex justify-center gap-4">
+      <button id="submit-test-btn"
+        class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-200 ease-in-out">
+        Submit Test
+      </button>
+      <a href="dashboard.html"
+        class="px-6 py-3 bg-gray-300 text-gray-800 font-semibold rounded-lg hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 transition duration-200 ease-in-out">
+        Back to Dashboard
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const symptomsListDiv = document.getElementById('symptoms-list');
+    const submitTestBtn = document.getElementById('submit-test-btn');
+    const messageBox = document.getElementById('message');
+
+    function showMessage(msg, type) {
+      const baseClass = 'p-3 mt-4 rounded-md text-sm';
+      let typeClass = '';
+
+      if (type === 'success') {
+        typeClass = 'bg-green-100 text-green-700 border border-green-200';
+      } else if (type === 'error') {
+        typeClass = 'bg-red-100 text-red-700 border border-red-200';
+      }
+
+      messageBox.textContent = msg;
+      messageBox.className = `${baseClass} ${typeClass}`;
+      messageBox.classList.remove('hidden');
+
+      setTimeout(() => {
+        messageBox.classList.add('hidden');
+      }, 5000);
+    }
+
+    async function fetchSymptoms() {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        window.location.href = 'index.html';
+        return;
+      }
+
+      try {
+        const response = await fetch('http://127.0.0.1:5000/api/symptoms', {
+          method: 'GET',
+          headers: {
+            'x-access-token': token,
+            'Content-Type': 'application/json',
+          },
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          symptomsListDiv.innerHTML = ''; // Clear loading message
+          data.forEach(symptom => {
+            const div = document.createElement('div');
+            div.className = 'flex items-center p-2 bg-gray-50 rounded-md shadow-sm';
+            div.innerHTML = `
+              <input type="checkbox" id="symptom-${symptom.id}" value="${symptom.id}" 
+                class="form-checkbox h-5 w-5 text-blue-600 rounded focus:ring-blue-500">
+              <label for="symptom-${symptom.id}" class="ml-2 text-gray-700 cursor-pointer">${symptom.name}</label>
+            `;
+            symptomsListDiv.appendChild(div);
+          });
+        } else {
+          showMessage(data.message || 'Failed to load symptoms.', 'error');
+        }
+      } catch (error) {
+        console.error('Error fetching symptoms:', error);
+        showMessage('An error occurred while fetching symptoms.', 'error');
+      }
+    }
+
+    submitTestBtn.addEventListener('click', async () => {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        window.location.href = 'index.html';
+        return;
+      }
+
+      const selectedSymptomIds = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+        .map(checkbox => parseInt(checkbox.value));
+
+      if (selectedSymptomIds.length === 0) {
+        showMessage('Please select at least one symptom.', 'error');
+        return;
+      }
+
+      try {
+        const response = await fetch('http://127.0.0.1:5000/api/submit_test', {
+          method: 'POST',
+          headers: {
+            'x-access-token': token,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ symptom_ids: selectedSymptomIds }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          showMessage(`Predicted Disorder: ${data.predicted_disorder}. Report saved!`, 'success');
+          setTimeout(() => {
+            window.location.href = 'report.html';
+          }, 2000);
+        } else {
+          showMessage(data.message || 'Failed to submit test.', 'error');
+        }
+      } catch (error) {
+        console.error('Error submitting test:', error);
+        showMessage('An error occurred during test submission.', 'error');
+      }
+    });
+
+    fetchSymptoms(); // Load symptoms when the page loads
+  </script>
+</body>
+</html>

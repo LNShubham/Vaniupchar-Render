@@ -1,0 +1,451 @@
+Patient_ID,Age,Gender,Repetitive_Patterns,Prolongations,Speech_to_Motor_Issue,Injury_to_Motor_Component,Outer_Middle_Ear_Problems,Speech_Sound_Pronunciation,Word_Formation_Difficulty,Language_Literacy_Problems,Pitch_Issues,Fluency_Disorder,Disorder
+P8696,28,M,0,1,1,1,1,0,1,1,1,0,Voice Disorder
+P2673,35,F,1,0,0,0,0,0,0,0,0,1,Voice Disorder
+P1048,35,M,0,1,0,0,0,0,0,0,0,1,Stuttering
+P7901,51,F,0,0,0,0,1,1,0,0,0,0,Articulation Disorder
+P3056,23,F,0,0,1,0,0,0,0,0,0,0,Voice Disorder
+P6449,19,F,0,1,1,0,1,0,1,1,1,1,Apraxia of Speech
+P2202,41,M,0,1,0,1,0,1,1,1,0,1,Speech Sound Disorder
+P7951,53,M,1,1,1,0,1,0,0,0,0,0,Voice Disorder
+P4968,32,F,1,0,0,0,1,0,0,0,0,1,Dysarthria
+P6853,26,F,0,1,0,0,1,0,0,0,1,1,Hearing Loss
+P7147,18,F,1,1,0,0,0,0,1,1,0,1,Stuttering
+P3207,39,M,0,0,1,1,0,0,0,1,0,0,Voice Disorder
+P1047,26,F,0,0,0,0,0,0,0,1,0,0,Language Delay
+P3358,28,M,1,1,1,0,0,0,0,1,1,1,Apraxia of Speech
+P9768,16,F,0,0,0,1,0,1,1,0,0,1,Speech Sound Disorder
+P6658,45,F,1,0,0,0,1,1,1,0,1,1,Stuttering
+P6401,55,F,1,0,1,1,1,1,0,1,0,0,Dysarthria
+P1047,26,F,0,0,0,0,0,0,0,1,0,0,Language Delay
+P5343,40,M,0,1,1,0,0,1,0,0,1,0,Language Delay
+P3881,52,M,0,1,0,0,1,0,1,0,0,0,Articulation Disorder
+P6406,22,F,1,1,1,0,0,1,1,0,1,1,Language Delay
+P6406,22,F,1,1,1,0,0,1,1,0,1,1,Language Delay
+P5266,49,M,0,1,1,0,1,0,0,1,0,1,Voice Disorder
+P3580,27,M,1,0,0,0,1,0,0,0,0,1,Articulation Disorder
+P6076,45,F,0,0,1,1,0,0,1,1,0,1,Stuttering
+P3745,21,M,0,0,1,1,1,1,0,0,1,0,Voice Disorder
+P2691,41,M,1,0,0,0,0,0,0,0,1,1,Phonological Disorder
+P9321,20,F,1,0,1,1,0,0,1,0,0,1,Hearing Loss
+P7924,28,F,0,1,0,0,1,1,0,0,1,0,Apraxia of Speech
+P3980,22,M,1,0,1,1,1,1,1,0,0,0,Autism Spectrum Disorder
+P8741,39,M,1,1,0,1,1,1,1,1,1,0,Dysarthria
+P1043,32,F,0,0,0,0,0,1,1,0,0,0,Speech Sound Disorder
+P4079,42,M,1,0,0,1,1,0,0,0,1,0,Speech Sound Disorder
+P5883,40,F,0,1,0,1,0,1,1,1,0,0,Stuttering
+P1057,23,F,0,0,0,0,0,0,0,1,0,0,Language Delay
+P4608,51,M,0,1,1,0,1,1,0,1,1,1,Speech Sound Disorder
+P2691,41,M,1,0,0,0,0,0,0,0,1,1,Phonological Disorder
+P4796,56,M,1,0,0,0,1,0,1,1,0,0,Voice Disorder
+P3483,20,M,0,0,0,1,1,1,0,0,1,0,Language Delay
+P2027,51,F,1,1,1,1,0,1,1,0,0,0,Voice Disorder
+P9252,51,M,0,0,1,0,1,1,0,1,0,0,Voice Disorder
+P6791,35,F,0,1,0,0,1,0,1,0,1,0,Apraxia of Speech
+P6832,42,M,1,0,0,1,0,0,0,1,1,0,Language Delay
+P1031,25,F,0,0,0,1,0,1,1,0,0,0,Dysarthria
+P4271,18,M,0,1,0,0,0,1,1,1,1,0,Phonological Disorder
+P4909,48,F,0,1,0,1,1,1,0,1,0,1,Speech Sound Disorder
+P1065,54,F,1,0,0,0,0,0,0,1,0,0,Autism Spectrum Disorder
+P8271,24,F,0,1,1,0,1,1,0,1,0,0,Autism Spectrum Disorder
+P3474,34,M,1,0,1,1,0,1,1,1,0,1,Phonological Disorder
+P3368,35,M,0,1,1,1,1,0,1,0,1,0,Language Delay
+P6436,46,F,0,0,1,1,1,1,0,0,1,0,Articulation Disorder
+P9491,38,M,0,1,0,0,1,0,0,0,1,0,Autism Spectrum Disorder
+P8050,30,F,0,0,0,0,0,1,1,1,1,0,Hearing Loss
+P8541,16,M,1,0,0,1,0,1,1,1,0,1,Language Delay
+P1043,32,F,0,0,0,0,0,1,1,0,0,0,Speech Sound Disorder
+P4326,40,F,0,1,1,0,1,1,1,0,0,0,Articulation Disorder
+P3093,23,M,1,0,0,0,1,1,0,1,1,0,Phonological Disorder
+P3649,54,M,0,0,0,0,1,0,1,1,1,1,Articulation Disorder
+P1048,35,M,0,1,0,0,0,0,0,0,0,1,Stuttering
+P3392,16,F,0,1,1,1,0,1,0,0,1,1,Autism Spectrum Disorder
+P7711,45,F,1,0,0,0,0,0,0,0,0,0,Articulation Disorder
+P1046,45,M,0,0,0,0,0,1,1,0,0,0,Articulation Disorder
+P9840,17,M,1,1,0,0,1,0,0,0,0,0,Hearing Loss
+P6853,26,F,0,1,0,0,1,0,0,0,1,1,Hearing Loss
+P6135,24,M,1,0,1,0,0,0,0,0,1,0,Language Delay
+P8376,36,M,1,1,1,1,1,1,1,1,1,1,Speech Sound Disorder
+P3050,51,M,1,1,0,0,1,1,1,0,1,0,Voice Disorder
+P2691,41,M,1,0,0,0,0,0,0,0,1,1,Phonological Disorder
+P9321,20,F,1,0,1,1,0,0,1,0,0,1,Hearing Loss
+P9510,56,M,0,0,0,0,1,0,1,1,0,1,Stuttering
+P4257,17,F,1,0,0,1,0,0,1,0,0,0,Phonological Disorder
+P8963,50,F,0,0,0,0,0,1,1,1,0,0,Articulation Disorder
+P8824,46,M,0,0,1,1,0,1,0,1,1,0,Hearing Loss
+P4913,31,M,0,0,1,1,0,0,0,1,0,1,Autism Spectrum Disorder
+P9614,37,F,0,0,1,0,1,0,0,1,1,1,Voice Disorder
+P4886,42,F,1,0,1,0,1,0,0,0,0,1,Articulation Disorder
+P7924,28,F,0,1,0,0,1,1,0,0,1,0,Apraxia of Speech
+P4104,35,M,1,0,1,0,0,1,1,1,1,0,Stuttering
+P1034,25,M,0,0,0,0,0,0,1,1,0,0,Phonological Disorder
+P7272,42,F,1,1,0,1,0,0,0,1,1,0,Autism Spectrum Disorder
+P8049,51,F,1,0,1,0,1,1,1,0,0,1,Stuttering
+P2830,26,M,1,0,1,0,0,1,1,0,0,0,Hearing Loss
+P1036,28,M,0,0,0,0,0,1,1,0,0,0,Articulation Disorder
+P4926,24,M,0,0,0,0,1,0,1,1,1,0,Language Delay
+P2652,53,F,1,0,0,1,1,0,0,1,1,1,Autism Spectrum Disorder
+P1054,21,M,0,0,0,0,0,0,1,1,0,0,Phonological Disorder
+P5943,33,M,0,1,1,1,0,1,0,1,1,0,Phonological Disorder
+P7206,20,F,0,1,1,1,1,1,0,0,0,1,Hearing Loss
+P1037,35,F,0,0,0,0,0,0,0,1,0,0,Language Delay
+P6214,29,F,0,1,1,0,1,1,0,0,1,1,Apraxia of Speech
+P7901,51,F,0,0,0,0,1,1,0,0,0,0,Articulation Disorder
+P8049,44,M,1,0,1,1,0,0,1,0,0,0,Articulation Disorder
+P8490,27,M,1,1,1,0,0,0,1,0,1,0,Language Delay
+P6653,38,F,1,0,0,0,1,0,0,0,1,1,Apraxia of Speech
+P9590,18,F,1,1,0,1,1,0,1,1,0,0,Dysarthria
+P3580,27,M,1,0,0,0,1,0,0,0,0,1,Articulation Disorder
+P7618,30,F,0,0,1,1,1,1,1,0,1,0,Language Delay
+P5953,47,F,0,0,0,0,0,1,1,0,1,0,Hearing Loss
+P3207,39,M,0,0,1,1,0,0,0,1,0,0,Voice Disorder
+P7931,33,F,0,0,0,1,0,0,0,0,1,1,Phonological Disorder
+P4462,42,F,0,0,0,1,1,0,1,1,1,1,Hearing Loss
+P8058,28,M,1,0,0,1,1,0,0,1,0,0,Stuttering
+P9507,36,M,0,1,0,0,1,0,0,0,1,1,Phonological Disorder
+P9321,20,F,1,0,1,1,0,0,1,0,0,1,Hearing Loss
+P4963,51,M,1,1,0,0,0,0,1,0,1,0,Apraxia of Speech
+P2909,41,M,0,0,0,1,1,0,0,1,1,1,Dysarthria
+P7774,41,F,1,0,0,0,0,0,1,0,1,1,Autism Spectrum Disorder
+P3803,25,F,0,1,0,1,1,0,1,1,1,1,Stuttering
+P1064,56,M,0,0,0,0,0,0,1,1,0,0,Phonological Disorder
+P8049,44,M,1,0,1,1,0,0,1,0,0,0,Articulation Disorder
+P4600,29,F,1,1,0,1,1,1,0,0,1,1,Language Delay
+P1063,53,F,0,0,0,0,0,1,1,0,0,0,Speech Sound Disorder
+P2830,26,M,1,0,1,0,0,1,1,0,0,0,Hearing Loss
+P7092,32,F,0,0,1,1,1,1,0,0,1,1,Phonological Disorder
+P1062,26,M,0,0,0,0,1,0,0,1,0,0,Hearing Loss
+P1056,22,M,0,0,0,0,0,1,1,0,0,0,Articulation Disorder
+P1059,26,F,0,0,0,0,0,0,0,0,1,0,Voice Disorder
+P7786,36,M,1,1,0,1,0,1,1,0,0,1,Stuttering
+P4420,34,M,1,1,1,0,0,0,1,1,1,0,Speech Sound Disorder
+P5547,46,M,0,0,0,0,1,1,1,1,0,0,Articulation Disorder
+P2994,27,F,1,0,0,0,0,1,0,1,1,1,Articulation Disorder
+P3303,15,M,0,1,1,0,1,0,1,1,0,0,Apraxia of Speech
+P1037,35,F,0,0,0,0,0,0,0,1,0,0,Language Delay
+P1035,26,F,1,0,0,0,0,0,0,1,0,0,Autism Spectrum Disorder
+P1051,24,F,0,0,0,1,0,1,1,0,0,0,Dysarthria
+P2587,56,F,1,1,0,0,0,1,1,1,1,1,Speech Sound Disorder
+P2216,53,M,1,1,0,0,0,0,1,1,0,0,Language Delay
+P6729,50,F,0,0,0,1,1,1,0,0,0,0,Stuttering
+P2830,26,M,1,0,1,0,0,1,1,0,0,0,Hearing Loss
+P2652,53,F,1,0,0,1,1,0,0,1,1,1,Autism Spectrum Disorder
+P1026,26,M,0,0,0,0,0,1,1,0,0,0,Articulation Disorder
+P9689,53,F,0,0,1,0,0,0,0,0,1,1,Hearing Loss
+P1042,15,M,0,0,0,0,1,0,0,1,0,0,Hearing Loss
+P1036,28,M,0,0,0,0,0,1,1,0,0,0,Articulation Disorder
+P3649,54,M,0,0,0,0,1,0,1,1,1,1,Articulation Disorder
+P3175,28,M,1,1,0,1,0,0,0,0,0,0,Voice Disorder
+P4104,35,M,1,0,1,0,0,1,1,1,1,0,Stuttering
+P8892,20,M,0,1,0,1,1,0,1,0,0,1,Dysarthria
+P4721,53,M,1,0,0,1,1,1,0,0,0,1,Voice Disorder
+P7848,47,F,0,0,1,1,1,0,1,1,0,1,Stuttering
+P4098,49,M,1,1,0,0,1,0,0,0,1,1,Stuttering
+P1059,26,F,0,0,0,0,0,0,0,0,1,0,Voice Disorder
+P3836,23,M,0,1,1,0,1,1,1,1,0,0,Apraxia of Speech
+P5416,36,M,1,0,0,0,0,0,0,1,0,1,Speech Sound Disorder
+P7420,51,F,1,0,1,1,0,1,1,0,1,0,Speech Sound Disorder
+P3821,36,F,0,0,0,0,0,1,0,1,1,0,Apraxia of Speech
+P9659,50,F,1,0,0,1,1,1,0,0,1,0,Apraxia of Speech
+P6870,47,F,0,0,0,0,1,1,1,0,0,1,Phonological Disorder
+P9737,51,F,1,1,1,1,0,1,1,1,1,1,Apraxia of Speech
+P8870,50,M,1,1,0,1,0,0,1,1,0,0,Phonological Disorder
+P1049,21,F,0,0,0,0,0,0,0,0,1,0,Voice Disorder
+P5664,22,M,1,0,0,0,0,0,1,0,1,0,Apraxia of Speech
+P2052,25,M,0,0,0,1,1,1,1,0,1,0,Dysarthria
+P7704,23,F,0,0,0,0,0,1,0,0,1,1,Stuttering
+P9832,22,M,0,0,0,1,1,1,1,0,0,0,Autism Spectrum Disorder
+P3594,18,F,1,1,1,0,0,1,0,1,0,0,Apraxia of Speech
+P8692,21,M,0,0,0,0,1,0,1,1,1,1,Phonological Disorder
+P7423,19,F,0,0,0,0,1,0,0,1,0,0,Apraxia of Speech
+P3059,17,M,0,1,1,0,0,1,1,0,1,1,Voice Disorder
+P1035,26,F,1,0,0,0,0,0,0,1,0,0,Autism Spectrum Disorder
+P6298,39,F,1,0,0,0,1,0,1,1,0,0,Language Delay
+P7074,28,M,0,0,1,0,1,1,1,1,1,1,Autism Spectrum Disorder
+P5668,45,M,1,0,1,1,0,0,0,1,0,1,Dysarthria
+P2683,18,M,0,0,0,1,1,0,0,0,0,1,Language Delay
+P6598,19,F,1,1,0,0,1,0,1,0,1,0,Voice Disorder
+P5590,16,M,1,1,1,1,1,0,1,1,1,0,Speech Sound Disorder
+P5943,33,M,0,1,1,1,0,1,0,1,1,0,Phonological Disorder
+P7147,18,F,1,1,0,0,0,0,1,1,0,1,Stuttering
+P6557,31,M,1,0,0,0,1,1,1,1,1,1,Dysarthria
+P3437,50,F,0,0,1,1,1,0,1,1,0,0,Dysarthria
+P4402,26,M,0,0,0,0,1,0,1,0,1,1,Phonological Disorder
+P3083,19,M,0,1,1,1,0,0,0,0,0,0,Speech Sound Disorder
+P4916,33,M,1,0,1,0,0,1,0,1,0,0,Dysarthria
+P8366,17,M,0,0,0,0,0,1,1,0,0,1,Hearing Loss
+P6224,31,M,0,0,1,0,0,0,1,1,0,1,Voice Disorder
+P6870,47,F,0,0,0,0,1,1,1,0,0,1,Phonological Disorder
+P4420,34,M,1,1,1,0,0,0,1,1,1,0,Speech Sound Disorder
+P6504,27,F,0,0,1,0,0,0,1,1,1,0,Articulation Disorder
+P6459,23,F,1,0,1,1,0,1,1,0,0,0,Apraxia of Speech
+P6218,46,M,1,0,0,0,1,0,0,1,1,1,Voice Disorder
+P7750,28,M,1,0,1,0,1,1,1,0,0,1,Autism Spectrum Disorder
+P4565,23,F,0,1,1,0,1,0,0,0,0,0,Dysarthria
+P1049,21,F,0,0,0,0,0,0,0,0,1,0,Voice Disorder
+P6340,18,F,1,1,0,1,0,1,0,1,0,1,Language Delay
+P8338,50,F,1,1,1,0,0,1,1,0,1,1,Stuttering
+P5190,40,M,1,0,0,0,1,0,1,1,1,1,Autism Spectrum Disorder
+P3146,16,M,1,0,0,1,0,0,1,1,0,1,Hearing Loss
+P6436,46,F,0,0,1,1,1,1,0,0,1,0,Articulation Disorder
+P2587,56,F,1,1,0,0,0,1,1,1,1,1,Speech Sound Disorder
+P5053,39,F,1,1,0,1,1,1,0,1,1,0,Phonological Disorder
+P3303,15,M,0,1,1,0,1,0,1,1,0,0,Apraxia of Speech
+P7239,38,M,1,0,1,0,1,0,1,1,0,1,Apraxia of Speech
+P5664,22,M,1,0,0,0,0,0,1,0,1,0,Apraxia of Speech
+P4170,52,F,1,0,0,0,0,0,1,0,1,0,Autism Spectrum Disorder
+P7859,23,M,1,1,0,0,0,1,1,1,0,1,Articulation Disorder
+P8840,38,M,0,0,0,1,1,1,1,0,1,1,Dysarthria
+P1038,36,M,0,1,0,0,0,0,0,0,0,1,Stuttering
+P7407,53,M,1,0,0,1,1,0,0,1,0,0,Language Delay
+P5727,52,F,0,0,1,1,0,0,0,0,1,1,Articulation Disorder
+P2830,26,M,1,0,1,0,0,1,1,0,0,0,Hearing Loss
+P5130,19,M,1,1,0,1,1,1,1,1,0,0,Apraxia of Speech
+P6333,43,F,0,0,1,0,1,1,1,1,0,0,Voice Disorder
+P6193,35,F,1,1,1,0,1,1,1,0,1,1,Speech Sound Disorder
+P3980,22,M,1,0,1,1,1,1,1,0,0,0,Autism Spectrum Disorder
+P5913,34,F,0,0,0,1,1,1,0,1,1,0,Phonological Disorder
+P8870,50,M,1,1,0,1,0,0,1,1,0,0,Phonological Disorder
+P1060,45,M,1,0,0,0,0,0,0,1,0,0,Autism Spectrum Disorder
+P6604,36,F,0,0,1,1,1,0,0,1,1,0,Autism Spectrum Disorder
+P5101,29,M,1,0,0,1,0,0,1,0,0,0,Language Delay
+P6405,38,F,0,1,0,0,0,0,1,0,0,0,Dysarthria
+P7423,19,F,0,0,0,0,1,0,0,1,0,0,Apraxia of Speech
+P7243,52,F,0,1,1,0,1,0,0,0,0,1,Dysarthria
+P3836,23,M,0,1,1,0,1,1,1,1,0,0,Apraxia of Speech
+P6436,46,F,0,0,1,1,1,1,0,0,1,0,Articulation Disorder
+P8049,51,F,1,0,1,0,1,1,1,0,0,1,Stuttering
+P2089,52,M,1,0,0,1,0,0,1,1,1,1,Phonological Disorder
+P4926,24,M,0,0,0,0,1,0,1,1,1,0,Language Delay
+P7847,39,F,0,1,1,0,0,0,1,0,1,1,Dysarthria
+P1058,35,M,0,1,0,0,0,0,0,0,0,1,Stuttering
+P2202,41,M,0,1,0,1,0,1,1,1,0,1,Speech Sound Disorder
+P2397,21,F,0,1,0,1,1,1,0,0,1,1,Stuttering
+P3594,18,F,1,1,1,0,0,1,0,1,0,0,Apraxia of Speech
+P2417,48,F,1,1,0,0,0,0,0,0,1,1,Speech Sound Disorder
+P6571,55,M,0,0,0,0,1,0,1,0,1,0,Speech Sound Disorder
+P2097,27,F,0,1,1,1,0,0,1,1,0,0,Dysarthria
+P2397,21,F,0,1,0,1,1,1,0,0,1,1,Stuttering
+P2830,26,M,1,0,1,0,0,1,1,0,0,0,Hearing Loss
+P4813,50,M,0,1,1,1,1,0,0,1,0,1,Language Delay
+P2994,27,F,1,0,0,0,0,1,0,1,1,1,Articulation Disorder
+P5727,52,F,0,0,1,1,0,0,0,0,1,1,Articulation Disorder
+P3822,18,M,1,0,1,1,1,0,0,0,0,0,Apraxia of Speech
+P3620,29,F,0,1,1,1,0,0,0,1,0,1,Stuttering
+P3980,22,M,1,0,1,1,1,1,1,0,0,0,Autism Spectrum Disorder
+P9153,16,F,1,0,1,1,1,1,0,0,1,0,Autism Spectrum Disorder
+P1065,54,F,1,0,0,0,0,0,0,1,0,0,Autism Spectrum Disorder
+P8541,16,M,1,0,0,1,0,1,1,1,0,1,Language Delay
+P3413,19,M,0,0,0,1,1,1,1,0,1,0,Dysarthria
+P6853,26,F,0,1,0,0,1,0,0,0,1,1,Hearing Loss
+P8817,31,F,1,1,1,1,1,1,0,1,1,0,Dysarthria
+P1042,15,M,0,0,0,0,1,0,0,1,0,0,Hearing Loss
+P4079,42,M,1,0,0,1,1,0,0,0,1,0,Speech Sound Disorder
+P9841,31,F,0,1,1,0,1,0,1,1,0,1,Speech Sound Disorder
+P3056,23,F,0,0,1,0,0,0,0,0,0,0,Voice Disorder
+P8003,23,M,1,1,1,0,0,1,0,0,0,0,Stuttering
+P3066,28,F,1,0,1,1,1,0,0,1,1,1,Apraxia of Speech
+P6188,29,M,0,1,1,1,0,1,0,1,1,1,Speech Sound Disorder
+P4271,18,M,0,1,0,0,0,1,1,1,1,0,Phonological Disorder
+P2854,31,F,1,0,1,1,0,1,1,0,1,0,Autism Spectrum Disorder
+P1061,27,F,0,0,0,1,0,1,1,0,0,0,Dysarthria
+P5145,36,M,1,0,0,1,0,0,0,0,0,1,Language Delay
+P7931,33,F,0,0,0,1,0,0,0,0,1,1,Phonological Disorder
+P6792,16,M,1,1,0,0,0,1,0,0,1,0,Autism Spectrum Disorder
+P4551,19,F,1,1,0,0,1,0,1,1,1,1,Stuttering
+P8692,21,M,0,0,0,0,1,0,1,1,1,1,Phonological Disorder
+P4643,43,F,1,1,1,0,0,1,0,1,0,1,Voice Disorder
+P6218,46,M,1,0,0,0,1,0,0,1,1,1,Voice Disorder
+P2666,23,M,1,0,1,0,1,1,1,0,0,0,Phonological Disorder
+P4257,17,F,1,0,0,1,0,0,1,0,0,0,Phonological Disorder
+P4548,52,F,0,1,1,1,0,1,0,0,1,0,Speech Sound Disorder
+P7124,54,M,0,0,0,0,0,1,1,0,1,0,Dysarthria
+P5953,47,F,0,0,0,0,0,1,1,0,1,0,Hearing Loss
+P6658,45,F,1,0,0,0,1,1,1,0,1,1,Stuttering
+P3822,18,M,1,0,1,1,1,0,0,0,0,0,Apraxia of Speech
+P6163,51,M,1,1,0,1,0,0,1,1,0,0,Hearing Loss
+P2666,23,M,1,0,1,0,1,1,1,0,0,0,Phonological Disorder
+P8982,30,M,1,0,0,0,0,0,0,0,0,0,Hearing Loss
+P2027,51,F,1,1,1,1,0,1,1,0,0,0,Voice Disorder
+P8734,38,F,0,1,0,0,1,1,0,1,0,0,Speech Sound Disorder
+P5209,56,F,0,0,1,0,1,0,1,0,1,1,Dysarthria
+P9689,53,F,0,0,1,0,0,0,0,0,1,1,Hearing Loss
+P7467,31,F,0,1,1,0,0,1,0,1,0,1,Apraxia of Speech
+P5601,44,M,1,0,1,0,1,1,1,1,0,1,Apraxia of Speech
+P1035,26,F,1,0,0,0,0,0,0,1,0,0,Autism Spectrum Disorder
+P9260,40,F,0,0,1,0,0,1,0,1,1,1,Dysarthria
+P3810,32,M,1,1,1,0,1,1,1,1,1,1,Dysarthria
+P3612,55,F,0,0,1,1,0,0,1,1,1,0,Stuttering
+P4104,35,M,1,0,1,0,0,1,1,1,1,0,Stuttering
+P6334,53,M,0,1,1,1,0,0,1,0,1,0,Autism Spectrum Disorder
+P6333,43,F,0,0,1,0,1,1,1,1,0,0,Voice Disorder
+P1052,26,M,0,0,0,0,1,0,0,1,0,0,Hearing Loss
+P2029,15,F,0,1,0,0,1,1,0,0,1,0,Stuttering
+P4945,49,M,1,1,1,0,0,1,1,0,0,0,Voice Disorder
+P1038,36,M,0,1,0,0,0,0,0,0,0,1,Stuttering
+P6304,18,M,1,0,1,1,1,0,0,1,0,0,Speech Sound Disorder
+P1032,26,M,0,0,0,0,1,0,0,1,0,0,Hearing Loss
+P9309,31,M,0,0,1,1,1,1,0,1,1,0,Stuttering
+P2270,41,M,1,1,1,1,1,1,1,0,0,1,Speech Sound Disorder
+P5547,46,M,0,0,0,0,1,1,1,1,0,0,Articulation Disorder
+P7340,54,M,1,1,0,1,0,0,0,0,0,1,Voice Disorder
+P5343,40,M,0,1,1,0,0,1,0,0,1,0,Language Delay
+P1052,26,M,0,0,0,0,1,0,0,1,0,0,Hearing Loss
+P3483,20,M,0,0,0,1,1,1,0,0,1,0,Language Delay
+P4627,33,M,0,0,0,0,1,0,1,0,0,0,Dysarthria
+P5017,20,M,1,0,1,1,0,1,0,1,0,1,Autism Spectrum Disorder
+P5201,36,F,0,0,1,0,0,0,0,0,0,0,Apraxia of Speech
+P9607,42,M,1,0,1,0,0,0,0,0,1,0,Articulation Disorder
+P7878,26,M,1,1,1,1,0,1,1,0,0,0,Articulation Disorder
+P3649,54,M,0,0,0,0,1,0,1,1,1,1,Articulation Disorder
+P4920,31,F,0,0,1,1,0,1,1,0,1,1,Apraxia of Speech
+P9737,51,F,1,1,1,1,0,1,1,1,1,1,Apraxia of Speech
+P1044,25,M,0,0,0,0,0,0,1,1,0,0,Phonological Disorder
+P3216,36,F,1,0,1,1,1,0,1,1,1,1,Phonological Disorder
+P1060,45,M,1,0,0,0,0,0,0,1,0,0,Autism Spectrum Disorder
+P4499,18,M,1,0,0,0,0,1,0,1,1,0,Stuttering
+P5021,48,F,0,1,1,0,1,0,0,1,0,0,Language Delay
+P3777,31,F,1,0,0,0,0,0,1,1,0,1,Dysarthria
+P6188,29,M,0,1,1,1,0,1,0,1,1,1,Speech Sound Disorder
+P5590,16,M,1,1,1,1,1,0,1,1,1,0,Speech Sound Disorder
+P4739,53,F,1,0,1,1,0,0,1,1,0,0,Apraxia of Speech
+P9802,41,M,0,0,1,0,1,0,0,0,1,1,Articulation Disorder
+P7092,32,F,0,0,1,1,1,1,0,0,1,1,Phonological Disorder
+P7272,42,F,1,1,0,1,0,0,0,1,1,0,Autism Spectrum Disorder
+P6163,51,M,1,1,0,1,0,0,1,1,0,0,Hearing Loss
+P3038,56,M,0,1,1,0,1,1,0,1,1,0,Dysarthria
+P8692,21,M,0,0,0,0,1,0,1,1,1,1,Phonological Disorder
+P9607,42,M,1,0,1,0,0,0,0,0,1,0,Articulation Disorder
+P6941,22,F,1,0,1,0,1,0,0,0,0,1,Dysarthria
+P7092,32,F,0,0,1,1,1,1,0,0,1,1,Phonological Disorder
+P3803,25,F,0,1,0,1,1,0,1,1,1,1,Stuttering
+P1041,24,F,0,0,0,1,0,1,1,0,0,0,Dysarthria
+P1044,25,M,0,0,0,0,0,0,1,1,0,0,Phonological Disorder
+P1045,34,F,1,0,0,0,0,0,0,1,0,0,Autism Spectrum Disorder
+P6653,38,F,1,0,0,0,1,0,0,0,1,1,Apraxia of Speech
+P3803,25,F,0,1,0,1,1,0,1,1,1,1,Stuttering
+P9321,20,F,1,0,1,1,0,0,1,0,0,1,Hearing Loss
+P6334,53,M,0,1,1,1,0,0,1,0,1,0,Autism Spectrum Disorder
+P6832,42,M,1,0,0,1,0,0,0,1,1,0,Language Delay
+P7618,30,F,0,0,1,1,1,1,1,0,1,0,Language Delay
+P3407,53,M,0,0,0,1,1,1,0,1,1,1,Articulation Disorder
+P2698,44,M,0,0,0,1,1,1,1,0,1,1,Dysarthria
+P2202,41,M,0,1,0,1,0,1,1,1,0,1,Speech Sound Disorder
+P9127,50,F,1,0,0,1,1,1,1,1,1,0,Autism Spectrum Disorder
+P1054,21,M,0,0,0,0,0,0,1,1,0,0,Phonological Disorder
+P9802,41,M,0,0,1,0,1,0,0,0,1,1,Articulation Disorder
+P8912,54,M,1,1,1,0,1,1,0,1,1,0,Speech Sound Disorder
+P8219,16,M,0,0,1,1,1,0,0,0,0,1,Dysarthria
+P6163,45,M,1,0,1,1,1,0,0,1,1,0,Dysarthria
+P1042,15,M,0,0,0,0,1,0,0,1,0,0,Hearing Loss
+P5596,54,M,1,1,1,0,0,1,1,0,1,1,Apraxia of Speech
+P3474,34,M,1,0,1,1,0,1,1,1,0,1,Phonological Disorder
+P7423,19,F,0,0,0,0,1,0,0,1,0,0,Apraxia of Speech
+P3664,54,F,0,1,0,0,1,1,1,1,1,1,Language Delay
+P2146,25,M,0,0,1,0,1,0,0,0,0,1,Apraxia of Speech
+P1038,36,M,0,1,0,0,0,0,0,0,0,1,Stuttering
+P2673,35,F,1,0,0,0,0,0,0,0,0,1,Voice Disorder
+P7711,45,F,1,0,0,0,0,0,0,0,0,0,Articulation Disorder
+P3006,21,F,0,0,0,0,1,0,0,1,1,0,Speech Sound Disorder
+P4508,44,F,0,1,1,0,0,1,0,1,1,1,Voice Disorder
+P6135,24,M,1,0,1,0,0,0,0,0,1,0,Language Delay
+P4462,42,F,0,0,0,1,1,0,1,1,1,1,Hearing Loss
+P2994,27,F,1,0,0,0,0,1,0,1,1,1,Articulation Disorder
+P5130,19,M,1,1,0,1,1,1,1,1,0,0,Apraxia of Speech
+P9802,41,M,0,0,1,0,1,0,0,0,1,1,Articulation Disorder
+P8777,26,F,0,1,0,1,1,1,0,1,0,1,Voice Disorder
+P5053,39,F,1,1,0,1,1,1,0,1,1,0,Phonological Disorder
+P3392,16,F,0,1,1,1,0,1,0,0,1,1,Autism Spectrum Disorder
+P8824,46,M,0,0,1,1,0,1,0,1,1,0,Hearing Loss
+P3474,34,M,1,0,1,1,0,1,1,1,0,1,Phonological Disorder
+P5240,48,F,0,0,1,1,0,0,0,0,1,0,Speech Sound Disorder
+P5516,36,M,1,0,0,0,0,1,1,1,0,0,Dysarthria
+P1040,32,M,1,0,0,0,0,0,0,1,0,0,Autism Spectrum Disorder
+P9550,29,F,1,0,1,0,1,0,0,0,1,1,Autism Spectrum Disorder
+P8653,42,M,0,1,0,0,0,1,1,0,0,1,Hearing Loss
+P9664,42,M,0,0,1,1,0,1,1,1,0,0,Voice Disorder
+P9271,25,F,1,1,1,0,1,0,1,1,1,1,Dysarthria
+P3050,51,M,1,1,0,0,1,1,1,0,1,0,Voice Disorder
+P9664,42,M,0,0,1,1,0,1,1,1,0,0,Voice Disorder
+P9689,53,F,0,0,1,0,0,0,0,0,1,1,Hearing Loss
+P6201,24,F,1,0,1,1,1,0,1,1,1,0,Speech Sound Disorder
+P7877,40,F,0,0,0,0,0,1,0,0,1,1,Dysarthria
+P7774,41,F,1,0,0,0,0,0,1,0,1,1,Autism Spectrum Disorder
+P3066,28,F,1,0,1,1,1,0,0,1,1,1,Apraxia of Speech
+P5547,46,M,0,0,0,0,1,1,1,1,0,0,Articulation Disorder
+P6886,43,F,0,1,1,0,1,0,0,0,0,0,Autism Spectrum Disorder
+P6604,36,F,0,0,1,1,1,0,0,1,1,0,Autism Spectrum Disorder
+P1062,26,M,0,0,0,0,1,0,0,1,0,0,Hearing Loss
+P9008,16,M,0,0,0,1,1,1,0,0,1,0,Dysarthria
+P2371,46,F,0,0,0,0,0,0,1,1,0,1,Stuttering
+P4575,20,F,0,1,0,1,0,1,0,0,0,1,Language Delay
+P4371,38,M,0,1,0,0,1,1,1,0,1,0,Articulation Disorder
+P6333,43,F,0,0,1,0,1,1,1,1,0,0,Voice Disorder
+P3514,34,M,0,0,0,1,0,1,1,1,0,0,Language Delay
+P1037,35,F,0,0,0,0,0,0,0,1,0,0,Language Delay
+P2380,17,M,1,1,1,1,0,1,0,0,1,0,Autism Spectrum Disorder
+P7901,51,F,0,0,0,0,1,1,0,0,0,0,Articulation Disorder
+P8268,55,F,1,0,1,1,1,1,0,1,1,1,Dysarthria
+P2089,52,M,1,0,0,1,0,0,1,1,1,1,Phonological Disorder
+P5883,40,F,0,1,0,1,0,1,1,1,0,0,Stuttering
+P8912,54,M,1,1,1,0,1,1,0,1,1,0,Speech Sound Disorder
+P4508,44,F,0,1,1,0,0,1,0,1,1,1,Voice Disorder
+P5021,48,F,0,1,1,0,1,0,0,1,0,0,Language Delay
+P5326,18,M,0,0,0,0,1,1,0,0,0,0,Speech Sound Disorder
+P6052,32,F,0,1,1,1,1,0,1,1,0,0,Dysarthria
+P2624,21,F,0,1,1,1,1,1,1,0,0,1,Dysarthria
+P9607,42,M,1,0,1,0,0,0,0,0,1,0,Articulation Disorder
+P4420,34,M,1,1,1,0,0,0,1,1,1,0,Speech Sound Disorder
+P1037,35,F,0,0,0,0,0,0,0,1,0,0,Language Delay
+P3474,34,M,1,0,1,1,0,1,1,1,0,1,Phonological Disorder
+P8824,46,M,0,0,1,1,0,1,0,1,1,0,Hearing Loss
+P8994,28,M,0,0,1,1,0,0,0,0,1,0,Apraxia of Speech
+P1053,35,F,0,0,0,0,0,1,1,0,0,0,Speech Sound Disorder
+P1049,21,F,0,0,0,0,0,0,0,0,1,0,Voice Disorder
+P8003,23,M,1,1,1,0,0,1,0,0,0,0,Stuttering
+P7206,20,F,0,1,1,1,1,1,0,0,0,1,Hearing Loss
+P6747,17,M,1,0,1,0,0,0,0,1,1,1,Voice Disorder
+P6188,29,M,0,1,1,1,0,1,0,1,1,1,Speech Sound Disorder
+P5641,49,M,0,1,1,0,0,1,1,1,1,1,Dysarthria
+P4575,20,F,0,1,0,1,0,1,0,0,0,1,Language Delay
+P5943,33,M,0,1,1,1,0,1,0,1,1,0,Phonological Disorder
+P5269,35,M,1,0,0,1,0,1,1,1,0,0,Language Delay
+P5596,54,M,1,1,1,0,0,1,1,0,1,1,Apraxia of Speech
+P8967,30,F,1,0,0,1,0,1,0,1,0,0,Autism Spectrum Disorder
+P8696,28,M,0,1,1,1,1,0,1,1,1,0,Voice Disorder
+P5017,20,M,1,0,1,1,0,1,0,1,0,1,Autism Spectrum Disorder
+P7467,31,F,0,1,1,0,0,1,0,1,0,1,Apraxia of Speech
+P4575,20,F,0,1,0,1,0,1,0,0,0,1,Language Delay
+P6832,42,M,1,0,0,1,0,0,0,1,1,0,Language Delay
+P1053,35,F,0,0,0,0,0,1,1,0,0,0,Speech Sound Disorder
+P4067,41,F,0,1,0,0,1,1,1,0,0,1,Dysarthria
+P9262,46,M,0,0,0,1,1,1,0,1,1,1,Dysarthria
+P3649,54,M,0,0,0,0,1,0,1,1,1,1,Articulation Disorder
+P2830,26,M,1,0,1,0,0,1,1,0,0,0,Hearing Loss
+P5601,44,M,1,0,1,0,1,1,1,1,0,1,Apraxia of Speech
+P5953,47,F,0,0,0,0,0,1,1,0,1,0,Hearing Loss
+P1040,32,M,1,0,0,0,0,0,0,1,0,0,Autism Spectrum Disorder
+P8692,21,M,0,0,0,0,1,0,1,1,1,1,Phonological Disorder
+P8174,47,F,1,1,1,1,1,1,0,1,0,0,Hearing Loss
+P3056,23,F,0,0,1,0,0,0,0,0,0,0,Voice Disorder
+P3083,19,M,0,1,1,1,0,0,0,0,0,0,Speech Sound Disorder
+P5587,52,M,1,1,1,0,0,1,1,1,0,1,Dysarthria
+P8366,17,M,0,0,0,0,0,1,1,0,0,1,Hearing Loss
+P3594,18,F,1,1,1,0,0,1,0,1,0,0,Apraxia of Speech
+P4098,49,M,1,1,0,0,1,0,0,0,1,1,Stuttering
+P6653,38,F,1,0,0,0,1,0,0,0,1,1,Apraxia of Speech
+P2270,41,M,1,1,1,1,1,1,1,0,0,1,Speech Sound Disorder
+P5079,36,M,1,0,1,0,1,0,1,0,1,1,Stuttering
+P4257,17,F,1,0,0,1,0,0,1,0,0,0,Phonological Disorder
+P1057,23,F,0,0,0,0,0,0,0,1,0,0,Language Delay
+P1043,32,F,0,0,0,0,0,1,1,0,0,0,Speech Sound Disorder
+P9153,16,F,1,0,1,1,1,1,0,0,1,0,Autism Spectrum Disorder
+P7786,36,M,1,1,0,1,0,1,1,0,0,1,Stuttering
+P3210,51,F,1,0,1,1,1,1,0,1,0,1,Voice Disorder
+P3407,53,M,0,0,0,1,1,1,0,1,1,1,Articulation Disorder
+P6604,36,F,0,0,1,1,1,0,0,1,1,0,Autism Spectrum Disorder
+P6298,39,F,1,0,0,0,1,0,1,1,0,0,Language Delay
+P9578,50,M,1,1,0,0,1,1,0,1,0,0,Stuttering
+P5953,47,F,0,0,0,0,0,1,1,0,1,0,Hearing Loss
+P4608,51,M,0,1,1,0,1,1,0,1,1,1,Speech Sound Disorder
+P9614,37,F,0,0,1,0,1,0,0,1,1,1,Voice Disorder
+P8338,50,F,1,1,1,0,0,1,1,0,1,1,Stuttering
