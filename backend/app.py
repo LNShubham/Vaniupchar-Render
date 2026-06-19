@@ -2,15 +2,19 @@
 
 import sqlite3
 import os
+import datetime
+import pickle
+
 from flask import Flask, request, jsonify, g
+from flask_cors import CORS
+
 from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
-import datetime
+
 from functools import wraps
-import pickle
+
 import numpy as np
 import pandas as pd
-from flask_cors import CORS # Import CORS
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -215,9 +219,14 @@ def token_required(f):
 
 # --- API Routes ---
 
+@app.route('/')
+def home():
+    return jsonify({"message": "Backend is running"})
+
 @app.route('/api/signup', methods=['POST'])
 def signup():
     data = request.get_json()
+
     username = data.get('username')
     password = data.get('password')
 
@@ -229,13 +238,21 @@ def signup():
 
     try:
         hashed_password = generate_password_hash(password, method='pbkdf2:sha256')
-        cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, hashed_password))
+
+        cursor.execute(
+            "INSERT INTO users (username, password) VALUES (?, ?)",
+            (username, hashed_password)
+        )
+
         db.commit()
+
         return jsonify({'message': 'User registered successfully!'}), 201
+
     except sqlite3.IntegrityError:
         return jsonify({'message': 'Username already exists!'}), 409
+
     except Exception as e:
-        return jsonify({'message': f'An error occurred: {e}'}), 500
+        return jsonify({'message': f'Error: {str(e)}'}), 500
 
 @app.route('/api/login', methods=['POST'])
 def login():
