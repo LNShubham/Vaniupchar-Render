@@ -15,13 +15,15 @@ from flask_cors import CORS # Import CORS
 # Initialize Flask app
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_strong_random_secret_key_here' # *** CHANGE THIS TO A UNIQUE, STRONG KEY IN PRODUCTION! ***
-DATABASE = 'voice_disorder.db'
-MODEL_PATH = 'model.pkl'
-BALANCED_SPEECH_DATASET_PATH = 'Balanced_Speech_Dataset.csv' # Path to your speech dataset
-DOCTOR_DATASET_PATH = 'Doctor.csv' # Path to your doctor dataset
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATABASE = os.path.join(BASE_DIR, 'voice_disorder.db')
+MODEL_PATH = os.path.join(BASE_DIR, 'model.pkl')
+BALANCED_SPEECH_DATASET_PATH = os.path.join(BASE_DIR, 'Balanced_Speech_Dataset.csv')
+DOCTOR_DATASET_PATH = os.path.join(BASE_DIR, 'Doctor.csv')
 
 # Simplified and robust CORS configuration
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:8000"}}, supports_credentials=True)
+CORS(app)
 
 # --- Database Helper Functions ---
 
@@ -41,12 +43,12 @@ def close_connection(exception):
         db.close()
 
 def init_db():
-    """Initializes the database schema and populates initial data from CSVs."""
     with app.app_context():
         db = get_db()
         cursor = db.cursor()
 
-        # Create Users table (unchanged)
+        # --- CREATE TABLES ---
+
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS users (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -55,7 +57,6 @@ def init_db():
             )
         ''')
 
-        # Create Disorders table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS disorders (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -63,7 +64,6 @@ def init_db():
             )
         ''')
 
-        # Create Symptoms table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS symptoms (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -71,102 +71,97 @@ def init_db():
             )
         ''')
 
-        # Create Doctors table (Updated schema to match Doctor.csv)
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS doctors (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                doctor_id TEXT UNIQUE NOT NULL, -- Original Doctor_ID from CSV
+                doctor_id TEXT UNIQUE NOT NULL,
                 name TEXT NOT NULL,
                 expertise TEXT NOT NULL,
                 experience_years INTEGER NOT NULL,
-                is_available INTEGER NOT NULL, -- 0 or 1
-                patients_allocated INTEGER DEFAULT 0 -- To track allocations
+                is_available INTEGER NOT NULL,
+                patients_allocated INTEGER DEFAULT 0
             )
         ''')
 
-        # Create UserReports table (unchanged)
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS user_reports (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 user_id INTEGER NOT NULL,
-                symptoms_selected TEXT NOT NULL, -- Stored as comma-separated symptom IDs
+                symptoms_selected TEXT NOT NULL,
                 predicted_disorder TEXT NOT NULL,
                 report_date TEXT NOT NULL,
                 FOREIGN KEY (user_id) REFERENCES users(id)
             )
         ''')
 
-        # Create Appointments table (UPDATED: added report_id and status)
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS appointments (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 user_id INTEGER NOT NULL,
-                doctor_id INTEGER NOT NULL, -- This refers to the AUTOINCREMENT PK of doctors table
-                report_id INTEGER UNIQUE, -- NEW: Link to user_reports
+                doctor_id INTEGER NOT NULL,
+                report_id INTEGER UNIQUE,
                 disorder_name TEXT NOT NULL,
                 appointment_date TEXT NOT NULL,
                 appointment_time TEXT NOT NULL,
-                status TEXT NOT NULL DEFAULT 'pending', -- NEW: 'pending', 'completed', 'cancelled'
+                status TEXT NOT NULL DEFAULT 'pending',
                 FOREIGN KEY (user_id) REFERENCES users(id),
                 FOREIGN KEY (doctor_id) REFERENCES doctors(id),
                 FOREIGN KEY (report_id) REFERENCES user_reports(id) ON DELETE CASCADE
             )
         ''')
-        db.commit() # Commit schema changes
 
-        # --- Populate tables from CSVs ---
-        # Populate Disorders and Symptoms from Balanced_Speech_Dataset.csv
-        try:
-            df_speech = pd.read_csv(BALANCED_SPEECH_DATASET_PATH)
-            # Get unique disorders
-            unique_disorders = df_speech['Disorder'].unique().tolist()
-            # Get symptom columns (all except Patient_ID, Age, Gender, and Disorder)
-            symptom_cols = [col for col in df_speech.columns if col not in ['Patient_ID', 'Age', 'Gender', 'Disorder']]
+        db.commit()
 
-            # Clear existing disorders and symptoms before inserting
-            cursor.execute("DELETE FROM disorders")
-            cursor.execute("DELETE FROM symptoms")
-            db.commit()
+        # --- INSERT DATA ONLY IF EMPTY ---
 
-            for disorder in unique_disorders:
-                cursor.execute("INSERT OR IGNORE INTO disorders (name) VALUES (?)", (disorder,))
-            for symptom in symptom_cols:
-                cursor.execute("INSERT OR IGNORE INTO symptoms (name) VALUES (?)", (symptom,))
-            db.commit()
-            print("Disorders and Symptoms tables populated from Balanced_Speech_Dataset.csv.")
+        # Disorders + Symptoms
+        cursor.execute("SELECT COUNT(*) FROM disorders")
+        if cursor.fetchone()[0] == 0:
+            try:
+                df = pd.read_csv(BALANCED_SPEECH_DATASET_PATH)
 
-        except FileNotFoundError:
-            print(f"Warning: {BALANCED_SPEECH_DATASET_PATH} not found. Make sure it's in the backend directory.")
-        except Exception as e:
-            print(f"Error populating disorders/symptoms from CSV: {e}")
+                disorders = df['Disorder'].unique().tolist()
+                symptoms = [col for col in df.columns if col not in ['Patient_ID', 'Age', 'Gender', 'Disorder']]
 
-        # Populate Doctors from Doctor.csv
-        try:
-            df_doctors = pd.read_csv(DOCTOR_DATASET_PATH)
+                for d in disorders:
+                    cursor.execute("INSERT INTO disorders (name) VALUES (?)", (d,))
 
-            # Clear existing doctors before inserting
-            cursor.execute("DELETE FROM doctors")
-            db.commit()
+                for s in symptoms:
+                    cursor.execute("INSERT INTO symptoms (name) VALUES (?)", (s,))
 
-            for index, row in df_doctors.iterrows():
-                cursor.execute(
-                    "INSERT INTO doctors (doctor_id, name, expertise, experience_years, is_available, patients_allocated) VALUES (?, ?, ?, ?, ?, ?)",
-                    (row['Doctor_ID'], row['Doctor_Name'], row['Expertise'],
-                     row['Experience (Years)'], row['Availability'], row['Patient_Allocated'])
-                )
-            db.commit()
-            print("Doctors table populated from Doctor.csv.")
-        except FileNotFoundError:
-            print(f"Warning: {DOCTOR_DATASET_PATH} not found. Make sure it's in the backend directory.")
-        except Exception as e:
-            print(f"Error populating doctors from CSV: {e}")
+                db.commit()
+                print("Inserted disorders & symptoms")
 
-        print("Database initialization complete.")
+            except Exception as e:
+                print(f"Error loading speech dataset: {e}")
 
-# Initialize the database when the application starts
-# This will run once when app.py is executed
-with app.app_context():
-    init_db()
+        # Doctors
+        cursor.execute("SELECT COUNT(*) FROM doctors")
+        if cursor.fetchone()[0] == 0:
+            try:
+                df = pd.read_csv(DOCTOR_DATASET_PATH)
+
+                for _, row in df.iterrows():
+                    cursor.execute('''
+                        INSERT INTO doctors 
+                        (doctor_id, name, expertise, experience_years, is_available, patients_allocated)
+                        VALUES (?, ?, ?, ?, ?, ?)
+                    ''', (
+                        row['Doctor_ID'],
+                        row['Doctor_Name'],
+                        row['Expertise'],
+                        row['Experience (Years)'],
+                        row['Availability'],
+                        row['Patient_Allocated']
+                    ))
+
+                db.commit()
+                print("Inserted doctors")
+
+            except Exception as e:
+                print(f"Error loading doctor dataset: {e}")
+
+        print("DB Ready ✅")
 
 # --- ML Model Loading ---
 model = None
@@ -584,5 +579,5 @@ def delete_report(current_user, report_id):
         return jsonify({'message': f'Error deleting report: {e}'}), 500
 
 # If you run this file directly, it will start the Flask server
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)

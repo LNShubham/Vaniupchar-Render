@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Doctor Appointment</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+
+        @layer components {
+            .form-input {
+                @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+            }
+            .btn-primary {
+                @apply px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700;
+            }
+            .btn-secondary {
+                @apply px-6 py-3 bg-gray-300 text-gray-800 font-semibold rounded-lg hover:bg-gray-400;
+            }
+            .message-box {
+                @apply p-3 mt-4 rounded-md text-sm;
+            }
+            .message-box.success {
+                @apply bg-green-100 text-green-700;
+            }
+            .message-box.error {
+                @apply bg-red-100 text-red-700;
+            }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col items-center min-h-screen p-4">
+
+<div class="w-full max-w-xl bg-white p-8 rounded-lg shadow-xl mt-8">
+
+    <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+        Book Doctor Appointment
+    </h1>
+
+    <div id="message" class="message-box hidden"></div>
+
+    <div class="mb-4">
+        <label class="block text-gray-700 mb-2">Predicted Disorder:</label>
+        <input type="text" id="disorder-input" class="form-input" readonly>
+        <input type="hidden" id="latest-report-id">
+    </div>
+
+    <div id="appointment-details" class="hidden bg-blue-50 p-4 rounded-md mb-6">
+        <p><strong>Doctor:</strong> <span id="booked-doctor-name"></span></p>
+        <p><strong>Date:</strong> <span id="booked-appointment-date"></span></p>
+        <p><strong>Time:</strong> <span id="booked-appointment-time"></span></p>
+    </div>
+
+    <div class="flex gap-4 justify-center">
+        <button id="book-appointment-btn" class="btn-primary">Book</button>
+        <a href="/dashboard" class="btn-secondary">Back</a>
+    </div>
+
+</div>
+
+<script>
+const disorderInput = document.getElementById('disorder-input');
+const reportIdInput = document.getElementById('latest-report-id');
+const btn = document.getElementById('book-appointment-btn');
+
+async function loadData() {
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+        window.location.href = '/';
+        return;
+    }
+
+    const res = await fetch('/api/reports', {
+        headers: { 'x-access-token': token }
+    });
+
+    const data = await res.json();
+
+    if (data.length > 0) {
+        disorderInput.value = data[0].predicted_disorder;
+        reportIdInput.value = data[0].id;
+    }
+}
+
+btn.addEventListener('click', async () => {
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+        window.location.href = '/';
+        return;
+    }
+
+    const res = await fetch('/api/book_appointment', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'x-access-token': token
+        },
+        body: JSON.stringify({
+            disorder: disorderInput.value,
+            report_id: reportIdInput.value
+        })
+    });
+
+    const data = await res.json();
+
+    alert(data.message);
+});
+
+loadData();
+</script>
+
+</body>
+</html>

@@ -9,8 +9,10 @@ import pickle
 import os
 
 # Define the paths to your datasets
-BALANCED_SPEECH_DATASET_PATH = 'Balanced_Speech_Dataset.csv'
-MODEL_PATH = 'model.pkl'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+BALANCED_SPEECH_DATASET_PATH = os.path.join(BASE_DIR, 'Balanced_Speech_Dataset.csv')
+MODEL_PATH = os.path.join(BASE_DIR, 'model.pkl')
 
 def train_and_save_model():
     """

@@ -1,3 +1,3 @@
 backend-app.py
-frontend-python -m http.server 8000
+templates-python -m http.server 8000
 webbrowser-http://localhost:8000/index.html
